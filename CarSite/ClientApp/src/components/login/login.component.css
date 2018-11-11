@@ -1,0 +1,19 @@
+.login-card {
+  background-color: #FAFAFA;
+  border: 1px solid #EFEFEF;
+  width: 10em;
+  height: 5em;
+  padding: 1em;
+}
+
+.login-card input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+}
+
+.login-card button[type=submit] {
+  margin-top: 0.5em;
+  float:right;
+  width: 5em;
+}

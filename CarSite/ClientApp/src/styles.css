@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --blue: #63b4f4;
+  --blue-dark: #1985c1;
+  --blue-light: #97e6ff;
+}
+
+input {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+}
+
+button {
+  border-style: none;
+  border-radius: 4px;
+  padding: 0.25em;
+}
+
+
+
+.blue button {
+  background-color: var(--blue);
+  color: white;
+}
+
+.blue button:hover {
+  background-color: var(--blue-dark);
+}
+
+.blue button:active {
+
+  color: var(--blue-light);
+}
+
+
+.blue input[type=email]:focus {
+  border-bottom: 1px solid #A0A0DD;
+}
+
+.blue input[type=password]:focus {
+  border-bottom: 1px solid #A0A0DD;
+}
+
+.blue {
+  background-color: var(--blue);
+  color: white;
+}
