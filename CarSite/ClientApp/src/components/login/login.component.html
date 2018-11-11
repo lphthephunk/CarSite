@@ -1,7 +1,24 @@
 <div class="login-card blue">
+  <strong>Login</strong>
   <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
-    <input type="email" [(ngModel)]="email" id="email" name="email" placeholder="email" required />
-    <input type="password" [(ngModel)]="password" id="password" name="password" placeholder="password" required />
-    <button type="submit">Log In</button>
+    <div class="input-container">
+      <input type="email" [(ngModel)]="email" id="email" name="email" placeholder="email" required />
+      <div class="input-error" *ngIf="emailError">
+        <i  class="fa fa-exclamation"></i>
+        <span class="tooltip">{{emailError.message}}</span>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input type="password" [(ngModel)]="password" id="password" name="password" placeholder="password" required />
+      <div class="input-error" *ngIf="passwordError" >
+        <i class="fa fa-exclamation"></i>
+        <span class="tooltip">{{passwordError.message}}</span>
+      </div>
+    </div>
+
+      <button type="submit">Log In</button>
+    <div class="input-error" *ngIf="serviceError"> {{serviceError.message}} </div>
   </form>
 </div>
+

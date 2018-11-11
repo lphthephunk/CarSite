@@ -6,10 +6,29 @@ import { Router } from "@angular/router"
 @Component({templateUrl: 'login.component.html', styleUrls: ['./login.component.css']})
 export class LoginComponent {
   http: HttpClient;
+  emailError: any;
+  passwordError: any;
+  serviceError: any;
 
+  isRequesting: boolean;
   constructor(http: HttpClient, private router: Router) { this.http = http; }
 
-  onSubmit(f : NgForm) {
+  onSubmit(f: NgForm) {
+
+    this.emailError = null;
+    this.passwordError = null;
+    this.serviceError = null;
+
+    if (!f.value.email || f.value.email == "") {
+      this.emailError = { message : "Please supply a valid email."};
+      return;
+    }
+
+    if (!f.value.password || f.value.password == "") {
+      this.passwordError = { message: "Please supply a valid email." };
+      return;
+    }
+
     var email = f.value.email;
     var password = f.value.password;
     let headers = new HttpHeaders();
@@ -25,6 +44,7 @@ export class LoginComponent {
         },
         response => {
           console.log(response);
+          this.serviceError = { message: response.message };
         },
         () => {
           console.log("POST complete");

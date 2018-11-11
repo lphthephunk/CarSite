@@ -1,19 +1,52 @@
 .login-card {
-  background-color: #FAFAFA;
+  background-color: #FDFDFD;
   border: 1px solid #EFEFEF;
-  width: 10em;
-  height: 5em;
-  padding: 1em;
+  width: 15rem;
+  height: 10rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.login-card .input-container {
+  display:flex;
+  width:100%;
+  margin-top: 1rem;
+  background: white;
+  border: 1px solid #EFEFEF;
+  padding: 0.25rem;
+}
+
+.login-card .input-error {
+  vertical-align: middle;
+  color: red;
+}
+
+.login-card .input-error i {
+  width: 1rem;
+  height: 1rem;
 }
 
 .login-card input {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5em;
+  width: 100%;
+  border: none;
+}
+.login-card button[type=submit] {
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.login-card button[type=submit] {
-  margin-top: 0.5em;
-  float:right;
-  width: 5em;
+.input-error:hover .tooltip {
+  display:block;
+}
+
+.tooltip {
+  display: none;
+  color: red;
+  background-color: #FDFDFD;
+  z-index: 3;
+  position: absolute;
+  margin-top: -1.25rem;
+  margin-left: 1rem;
+  padding: 0.25rem;
+  border: 1px solid #EFEFEF;
 }
