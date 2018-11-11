@@ -38,8 +38,8 @@ namespace supersecretapi
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
 
-                    ValidIssuer = "http://localhost:42000",
-                    ValidAudience = "http://localhost:42000",
+                    ValidIssuer = "http://localhost:44358",
+                    ValidAudience = "http://localhost:44358",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(supersecretapi.Controllers.AuthenticationController.SECRET_KEY))
                 };
             });
